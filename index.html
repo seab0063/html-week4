@@ -11,18 +11,91 @@
         <h1>HTML Week 4 - Images, Links, Forms, and Tables</h1>
         <nav>
           <a href="about.html">About</a>
+          <!-- names anchors use the # to target an d attribute on another tag-->
+          <a href="cats">Cats</a>
         </nav>
     </header>
     <main>
       <!-- the src, or source, is an attribute that tells the image tag which image it should display -->
-      <img src="images/kitten.jpg" alt="Kitten sleeping on a jet plane" width="300" title="Hang there baby"/>
+      <img src="images/kitten.jpg" alt="Kitten sleeping on a jet plane" width="1000" title="Hang there baby"/>
 
       <article>
         <!-- the a tag, or anchor tag, creates a link to take a user somewhere else -->
         <!-- the href tag tells the browser where the link should go-->
         <!-- the text in between the opening and closing a tags is what the user clicks on-->
-        <a href="https://youtube.com/dQw4w9WgXcQ" target=_blank">Kitten</a>
+        <!-- _blank in the target attribute opens the link in a new tab-->
+        <a href="https://youtube.com/dQw4w9WgXcQ" target="_blank">Kitten</a>
       </article>
+
+      <article id="cats">
+        <p>Things my cat does</p>
+        <ul>
+          <li>Makes kupkakes</li>
+          <li>Cuts off his tail</li>
+          <li>Son of a bii</li>
+        </ul>
+      </article>
+
+      <!-- the form tag defines the area of the form - when you submit, you submit all information
+      inside inside that form-->
+      <form action="index.html" method="get">
+        <!-- the label and the input are linked - the for attribute in the label tag must match the id
+        of the input tag-->
+        <!-- all form fields must have a type attribute (that defines where they are) and a name attribute
+        (that allows the place you send the information to access each field)-->
+        <p>
+         <label for="username">Name: </label>
+         <input id="username" type="text" name="username" placeholder="Jeff Skinner">
+        </p>
+        <p>
+          <!-- the password input field hides the characters the user types -->
+          <label for="pass">Password: </label>
+          <input id="pass" type="password" name="pass">
+        </p>
+        <p>
+          <!-- some inputs are more than just text, like the color picker -->
+          <label for ="col">Pick a color: </label>
+          <input id="col" type="color" name="col">
+        </p>
+        <p>
+          <!-- the value attribute sets a default starting value for the form field-->
+          <label for="num">Pick a number: </label>
+          <input id="num" type="range" name="num" value="4">
+        </p>
+        <p>
+          <!-- text area is for multiple lines of text-->
+          <label for="info">Enter the info:</label>
+          <textarea id="info" name="info">give us the ring my precious</textarea>
+        </p>
+        <p>
+          <!-- the select tag is nthe dropdown menu, and the option tags are each iten in the dropdown-->
+          <label for="character">Choose your character: </label>
+          <select id="character" name="character">
+            <!-- option tags must have a value, which is what gets sent with the form-->
+            <option>Whoo...f?</option>
+            <option value="Mario">Mario</option>
+            <option value="Luigi">Luigi</option>
+            <option value="Yoshi">Yoshi</option>
+          </select>
+        </p>
+        <p>
+          <!-- the checked attribute on a checkbox makes it start off checked-->
+          <label for="spam">Fuck me: </label>
+          <input type="checkbox" id="spam" name="spam" checked>
+        </p>
+        <p>
+          <!-- radio buttons need to have a matching name attribute to make them a set-->
+          <span>Are you a trump supporter:</span>
+          <label for="yes">Yes </label>
+          <input type="radio" id="yes" name="dogs" value="yes">
+          <label for="no">No! </label>
+          <input type="radio" id="no" name="dogs" value="no">
+        </p>
+        <p>
+          <!-- he submit button submits the form! -->
+          <button type="submit" name="submit">Submit!</button>
+        </p>
+      </form>
     </main>
     <footer>
         <article>&copy; Somebody, Somewhere, 2021</article>
